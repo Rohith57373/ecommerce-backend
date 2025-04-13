@@ -7,6 +7,20 @@ const cloudinary = require('../backend/cloudinary/cloudinary');
 require('dotenv').config()
 
 //  middleware
+app.use((req, res, next) => {
+    res.setHeader('Content-Security-Policy',
+        "default-src 'self'; " +
+        "script-src 'self' https://ecommerce-backend-f12.vercel.app; " +
+        "style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; " +
+        "font-src 'self' https://fonts.gstatic.com; " +
+        "img-src 'self' data:; " +
+        "connect-src 'self' https://ecommerce-backend-f12.vercel.app; " +
+        "frame-src 'none'; " +
+        "object-src 'none'; " +
+        "base-uri 'self';"
+    );
+    next();
+});
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json())
