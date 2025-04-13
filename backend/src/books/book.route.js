@@ -24,7 +24,7 @@ router.get("/:id", getSingleBook)
 router.put("/edit/:id", UpdateBook)
 
 // delete a book endpoint
-router.delete("/:id", verifyAdminToken, DeleteBook)
+router.delete("/:id", DeleteBook)
 
 
 
