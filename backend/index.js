@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000;
 const cors = require("cors");
-const cloudinary = require('../backend/cloudinary/cloudinary');
+const cloudinary = require('./cloudinary/cloudinary');
 
 require('dotenv').config()
 
