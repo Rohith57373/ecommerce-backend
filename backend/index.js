@@ -25,7 +25,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json())
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://ecommerce-frontend-alpha-ten.vercel.app'],
+    origin: ['http://localhost:5173', 'https://ecommerce-frontend-alpha-ten.vercel.app','https://gayathri-silks-online.vercel.app'],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
